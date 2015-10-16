@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="q.js"></script>
+    <script src="lc-sdk-jquery.js"></script>
+  </head>
+  <body>
+    <script>
+      var sdk = new ServiceClient( {
+        discoveryServers: ['http://46.101.245.190:8500']
+      });
+      sdk
+        .get('product-service','/products')
+        .then(function(result){
+          console.log(result);
+        });
+    </script>
+  </body>
+</html>
